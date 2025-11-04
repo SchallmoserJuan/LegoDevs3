@@ -1,10 +1,10 @@
-# LegoDevs2 — Proyecto Frontend (Grupo 5)
+# LegoDevs3 — Proyecto Frontend (Grupo 5)
 
 Aplicación frontend creada como trabajo práctico académico para la materia de Frontend | IFTS 29.
 
 ## Descripción
 
-LegoDevs2 es una SPA (Single Page Application) creada con React y Vite que contiene una barra lateral (sidebar) con navegación principal y secundaria, un submenú de "Equipo" que lista perfiles, páginas de demo para consumir datos JSON y API, una página de bitácora y secciones de perfil/estadísticas.
+LegoDevs3 es una SPA (Single Page Application) creada con React y Vite que contiene una barra lateral (sidebar) con navegación principal y secundaria, un submenú de "Equipo" que lista perfiles, páginas de demo para consumir datos JSON y API, una página de bitácora y secciones de perfil/estadísticas.
 
 ## Tecnologías
 
