@@ -1,0 +1,103 @@
+
+/* 1. Overlay (Fondo oscuro transparente) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* 2. Contenido del Modal (La caja blanca) */
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+/* 3. Estilo del Botón de Cierre (la X) */
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: #e30613;
+}
+
+/* 4. Contenido del Cuerpo */
+.modal-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.modal-metaphor {
+  font-weight: 600;
+  color: #0056b3;
+  margin-top: 0;
+  display: block;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.modal-description {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* 5. Botón de Acción */
+.modal-action-btn {
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.modal-action-btn:hover {
+  background-color: #e6b800;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .modal-content {
+    max-width: 95%;
+  }
+}

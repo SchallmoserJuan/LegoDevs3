@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Lego Star Wars: Halcón Milenario",
+    "category": "Star Wars",
+    "price": 849.99,
+    "pieces": 7541,
+    "imageUrl": "https://m.media-amazon.com/images/I/81tpqusI-mL._AC_SX679_.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Lego Technic: Lamborghini Sián",
+    "category": "Technic",
+    "price": 449.99,
+    "pieces": 3696,
+    "imageUrl": "https://m.media-amazon.com/images/I/81sVjcJ+XWL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Lego Ideas: Máquina de Escribir",
+    "category": "Ideas",
+    "price": 354.99,
+    "pieces": 2079,
+    "imageUrl": "https://m.media-amazon.com/images/I/81eX6gZqOrL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Lego Harry Potter: Castillo de Hogwarts",
+    "category": "Harry Potter",
+    "price": 469.99,
+    "pieces": 6020,
+    "imageUrl": "https://m.media-amazon.com/images/I/81QqyFMqW7L._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Lego Creator Expert: Ramo de Flores",
+    "category": "Creator Expert",
+    "price": 59.99,
+    "pieces": 756,
+    "imageUrl": "https://m.media-amazon.com/images/I/81h7HaX1f4L._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Lego Architecture: La Gran Pirámide de Guiza",
+    "category": "Architecture",
+    "price": 129.99,
+    "pieces": 1476,
+    "imageUrl": "https://m.media-amazon.com/images/I/81nG+Mc4ERL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Lego Technic: Bugatti Chiron",
+    "category": "Technic",
+    "price": 349.99,
+    "pieces": 3599,
+    "imageUrl": "https://m.media-amazon.com/images/I/81nwCs3fWjL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Lego Ideas: Saturno V de NASA",
+    "category": "Ideas",
+    "price": 119.99,
+    "pieces": 1969,
+    "imageUrl": "https://m.media-amazon.com/images/I/81jtA27x30L._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Lego Star Wars: Destructor Estelar Imperial",
+    "category": "Star Wars",
+    "price": 699.99,
+    "pieces": 4784,
+    "imageUrl": "https://m.media-amazon.com/images/I/91HkaSGREhL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Lego Creator Expert: Montaña Rusa",
+    "category": "Creator Expert",
+    "price": 399.99,
+    "pieces": 4124,
+    "imageUrl": "https://m.media-amazon.com/images/I/71Yyhfm1uNL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Lego Minecraft: La Aldea",
+    "category": "Minecraft",
+    "price": 199.99,
+    "pieces": 1600,
+    "imageUrl": "https://m.media-amazon.com/images/I/61fUYYyu41L._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Lego Disney: El Castillo Disney",
+    "category": "Disney",
+    "price": 349.99,
+    "pieces": 4080,
+    "imageUrl": "https://m.media-amazon.com/images/I/71MmEuGx1+L._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Lego Technic: Grúa Todoterreno",
+    "category": "Technic",
+    "price": 229.99,
+    "pieces": 4057,
+    "imageUrl": "https://m.media-amazon.com/images/I/81va4jyLVNL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Lego Ideas: Casa del Árbol",
+    "category": "Ideas",
+    "price": 249.99,
+    "pieces": 3036,
+    "imageUrl": "https://m.media-amazon.com/images/I/61ilMvznOSL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Lego Creator Expert: Ford Mustang",
+    "category": "Creator Expert",
+    "price": 169.99,
+    "pieces": 1471,
+    "imageUrl": "https://m.media-amazon.com/images/I/71nvco+T9aL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Lego Minecraft: The Enderman",
+    "category": "Minecraft",
+    "price": 139.99,
+    "pieces": 867,
+    "imageUrl": "https://m.media-amazon.com/images/I/61fUYYyu41L._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Lego Disney: Pixar Luxo Jr",
+    "category": "Disney",
+    "price": 66.99,
+    "pieces": 613,
+    "imageUrl": "https://m.media-amazon.com/images/I/71FXaMjDwDL._AC_SX679_.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Lego Technic: McLaren P1",
+    "category": "Technic",
+    "price": 444.99,
+    "pieces": 3893,
+    "imageUrl": "https://m.media-amazon.com/images/I/81LkpqYJyDL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Lego Ideas: The Globe ",
+    "category": "Ideas",
+    "price": 328.99,
+    "pieces": 2585,
+    "imageUrl": "https://m.media-amazon.com/images/I/61ilMvznOSL._AC_UL480_FMwebp_QL65_.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Lego Creator Expert: Cabaña",
+    "category": "Creator Expert",
+    "price": 229.99,
+    "pieces": 2082,
+    "imageUrl": "https://m.media-amazon.com/images/I/91jnRLYb5jL._AC_UL480_FMwebp_QL65_.jpg"
+  }
+]

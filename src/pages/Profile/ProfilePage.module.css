@@ -1,0 +1,364 @@
+/* ProfilePage.module.css - Versión mejorada */
+
+.dashboardContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mainColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sidebarColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Cards Base */
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 2px 10px rgba(18, 55, 100, 0.08);
+  border: 1px solid #eef2f7;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(18, 55, 100, 0.12);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card h3 svg {
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+
+.card:hover h3 svg {
+  color: #3b82f6;
+}
+
+/* Colores temáticos para bordes superiores */
+.bioSection { 
+  border-top: 5px solid #3b82f6; 
+}
+
+.projectsSection { 
+  border-top: 5px solid #ef4444; 
+}
+
+.skillsSection { 
+  border-top: 5px solid #f59e0b; 
+}
+
+.statsSection { 
+  border-top: 5px solid #22c55e; 
+}
+
+.contactSection { 
+  border-top: 5px solid #6b7280; 
+}
+
+/* Profile Header */
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(18, 55, 100, 0.08);
+  border: 1px solid #eef2f7;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 4px solid #3b82f6;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+.headerText h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.headerText h2 {
+  font-size: 1.25rem;
+  color: #6b7280;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.statusBadge {
+  display: inline-block;
+  background-color: #e0f2fe;
+  color: #0ea5e9;
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Bio Section */
+.bioSection p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* Projects Section */
+.projectsSection h3 {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.projectsSection h3:hover {
+  color: #3b82f6;
+}
+
+.projectsSection h3:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.projectsSection.collapsed .chevron {
+  transform: rotate(-90deg);
+}
+
+.projectList {
+  list-style: none;
+  padding-left: 5px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projectList li {
+  padding: 12px 0;
+  border-bottom: 1px dashed #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.projectList li:hover {
+  background-color: #f9fafb;
+  padding-left: 10px;
+  margin-left: -10px;
+  padding-right: 10px;
+  margin-right: -10px;
+  border-radius: 8px;
+}
+
+.projectList li:last-child {
+  border-bottom: none;
+}
+
+.projectList span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+/* Estados de proyectos */
+.projectList .status-completado {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.projectList .status-en-progreso {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+/* Skills Section */
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skillTag {
+  background-color: #eef2ff;
+  color: #4338ca;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.skillTag:hover {
+  background-color: #dbeafe;
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.2);
+}
+
+/* Stats Section */
+.statsSection {
+  text-align: center;
+}
+
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.chartContainer p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+/* Contact Section */
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  color: #374151;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.contactLink:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+  border-color: #e5e7eb;
+  transform: translateX(5px);
+}
+
+.contactLink svg {
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+.contactLink:hover svg {
+  color: #3b82f6;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .dashboardContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebarColumn {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: 1rem;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .headerText h1 {
+    font-size: 2rem;
+  }
+
+  .headerText h2 {
+    font-size: 1.1rem;
+  }
+
+  .skillsGrid {
+    justify-content: center;
+  }
+}
