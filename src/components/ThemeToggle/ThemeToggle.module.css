@@ -1,0 +1,70 @@
+.themeToggle {
+  /* Sin borde por defecto del botón */
+  border: 2px solid var(--border-color);
+
+  /* Fondo y color */
+  background: var(--bg-card);
+  color: var(--primary);
+
+  /* Centrar el icono */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Cursor */
+  cursor: pointer;
+
+  /* Transiciones suaves */
+  transition: all 0.3s ease;
+
+  /* Sombra sutil */
+  box-shadow: var(--shadow-sm);
+}
+
+.themeToggle:hover {
+  background: var(--bg-subcard);
+  transform: scale(1.1);
+  box-shadow: var(--shadow-md);
+}
+
+.themeToggle:active {
+  transform: scale(0.95);
+}
+
+/* Animación del icono */
+.themeToggle svg {
+  transition: transform 0.3s ease;
+}
+
+.themeToggle:hover svg {
+  transform: rotate(15deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .themeToggle svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Asegurar que el SVG herede el color y el trazo para ser visible en ambos temas */
+.themeToggle svg {
+  display: inline-block;
+  color: currentColor;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* Texto accesible oculto (para lectores de pantalla si se necesita) */
+.srOnly {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}

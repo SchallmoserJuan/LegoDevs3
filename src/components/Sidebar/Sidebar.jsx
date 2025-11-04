@@ -14,7 +14,7 @@ import { teamData } from "../../assets/data/teamData";
 import { NavItem } from "./components/NavItem";
 import { TeamSubmenu } from "./components/TeamSubmenu";
 import styles from "./Sidebar.module.css";
-import banner from "../../img/banner.png"
+import banner from "../../img/banner.png";
 
 const NAV_ITEMS = [
   { to: "/", icon: Home, label: "Home" },
@@ -64,11 +64,7 @@ const Sidebar = () => {
         {/* Profile Section */}
         <section className={styles.profileSection}>
           <header className={styles.header}>
-            <img
-              src={banner}
-              alt="Banner del equipo"
-              loading="lazy"
-            />
+            <img src={banner} alt="Banner del equipo" loading="lazy" />
           </header>
           <img
             className={styles.profilePic}
@@ -78,6 +74,7 @@ const Sidebar = () => {
           />
           <h1>Grupo 5</h1>
           <h2>Proyecto Frontend</h2>
+          {/* El toggle de tema se muestra en el contenido principal (Layout) */}
         </section>
 
         {/* Navigation Section */}

@@ -1,5 +1,5 @@
 .productCard {
-  background-color: #fff;
+  background-color: var(--bg-card);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
@@ -36,7 +36,7 @@
 
 .category {
   font-size: 0.85rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 8px;
   font-weight: 500;
 }
@@ -50,6 +50,6 @@
 .price {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #16a34a;
+  color: var(--border-green);
   margin-top: auto;
 }

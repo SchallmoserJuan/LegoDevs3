@@ -16,11 +16,11 @@
 
 .header p {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .diagramSection {
-  background-color: #fff;
+  background-color: var(--bg-card);
   padding: 30px;
   border-radius: 12px;
   margin-bottom: 40px;
@@ -34,14 +34,14 @@
 
 .description {
   font-size: 1rem;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 25px;
   max-width: 800px;
 }
 
 .imageContainer {
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background-color: var(--bg-card-muted);
+  border: 1px solid var(--border-card);
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -54,7 +54,7 @@
     "Segoe UI Mono", monospace;
   font-size: 0.95rem;
   color: #111827;
-  background: #ffffff;
+  background: var(--bg-card-muted);
   padding: 16px;
   border-radius: 6px;
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.03);
