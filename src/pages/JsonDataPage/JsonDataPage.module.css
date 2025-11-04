@@ -16,12 +16,12 @@
 
 .header p {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .header code {
-  background-color: #eef2ff;
-  color: #4338ca;
+  background-color: var(--bg-card-muted);
+  color: var(--primary);
   padding: 2px 6px;
   border-radius: 4px;
   font-family: monospace;

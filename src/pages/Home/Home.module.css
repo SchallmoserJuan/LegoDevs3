@@ -18,7 +18,7 @@ main {
   position: relative;
   text-align: center;
   padding: 60px 20px;
-  color: #fff;
+  color: var(--text-on-hero);
   border-radius: 12px;
   margin: 0 auto 60px auto;
   max-width: 1024px;
@@ -26,8 +26,6 @@ main {
   overflow: hidden;
   background: #333; /* Fallback */
 }
-
-
 
 .hero::before {
   content: "";
@@ -65,8 +63,8 @@ main {
 
 .btn {
   padding: 12px 24px;
-  background-color: #ffffff;
-  color: #121212;
+  background-color: var(--primary);
+  color: var(--bg-card);
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
@@ -75,26 +73,27 @@ main {
 }
 
 .btn:hover {
-  background-color: #f0f0f0;
+  background-color: var(--primary-hover);
   transform: translateY(-2px);
 }
 
 /* Sección Nuestro Equipo */
 .teamPreview {
   margin-bottom: 60px;
-  background-color: #ffffff;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
   padding: 40px 20px;
   border-radius: 12px;
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
 .teamPreview h2 {
   font-size: 2.2rem;
-  color: #121212;
+  color: var(--text-primary);
   margin-bottom: 40px;
 }
 
@@ -106,14 +105,14 @@ main {
 }
 
 .member {
-  background-color: #f9f9f9;
+  background-color: var(--bg-subcard);
   padding: 20px;
   border-radius: 12px;
   text-align: center;
   width: 170px;
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-card);
 }
 
 .member img {
@@ -122,19 +121,19 @@ main {
   border-radius: 50%;
   margin-bottom: 15px;
   object-fit: cover;
-  border: 3px solid #fff;
+  border: 3px solid var(--bg-card);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .member h3 {
   font-size: 1.1rem;
   margin-bottom: 5px;
-  color: #121212;
+  color: var(--text-primary);
 }
 
 .member p {
   font-size: 0.9rem;
-  color: #555;
+  color: var(--text-secondary);
 }
 
 .member:hover {
@@ -186,4 +185,9 @@ main {
   .btnSecondary {
     width: 100%;
   }
+}
+
+/* Dark-mode tweak: oscurecer aún más la imagen del hero para mejorar legibilidad */
+[data-theme="dark"] .hero::before {
+  filter: blur(3px) brightness(0.45);
 }

@@ -12,7 +12,7 @@ const StatsChart = ({ percentage }) => {
         styles={buildStyles({
           // Colores
           pathColor: `rgba(59, 130, 246, ${percentage / 100})`,
-          textColor: "#1f2937",
+          textColor: "var(--text-primary)",
           trailColor: "#e5e7eb",
           backgroundColor: "#3e98c7",
           // Animación

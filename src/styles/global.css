@@ -7,6 +7,94 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ============================================
+   TEMA CLARO (Default)
+   ============================================ */
+:root {
+  /* Backgrounds principales */
+  --bg-main: #f8fafc; /* Fondo general (reemplaza imagen en dark) */
+  --bg-card: #ffffff; /* Cards blancas */
+  --bg-subcard: #f3f4f6; /* Sub-cards grises */
+  --bg-card-muted: #e0f2fe;
+
+  /* Sidebar (no cambia) */
+  --bg-sidebar: #121212;
+  --text-sidebar: #ffffff;
+
+  /* Textos */
+  --text-primary: #1f2937; /* Texto principal oscuro */
+  --text-secondary: #6b7280; /* Texto secundario gris */
+  --text-muted: #9ca3af; /* Texto más claro */
+
+  /* Bordes */
+  --border-color: #e5e7eb; /* Bordes sutiles */
+  --border-card: #f0f0f0;
+
+  /* Bordes de colores (no cambian entre temas) */
+  --border-blue: #3b82f6;
+  --border-red: #ef4444;
+  --border-yellow: #f59e0b;
+  --border-green: #22c55e;
+  --border-gray: #6b7280;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  /* Colores primarios */
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+}
+
+/* ============================================
+   TEMA OSCURO
+   ============================================ */
+[data-theme="dark"] {
+  /* Backgrounds principales */
+  --bg-main: #0f172a; /* Fondo general oscuro */
+  --bg-card: #1e293b; /* Cards gris oscuro */
+  --bg-subcard: #0f172a; /* Sub-cards más oscuras */
+
+  /* Sidebar (no cambia) */
+  --bg-sidebar: #121212;
+  --text-sidebar: #ffffff;
+
+  /* Textos */
+  --text-primary: #f1f5f9; /* Texto claro */
+  --text-secondary: #cbd5e1; /* Texto secundario */
+  --text-muted: #94a3b8; /* Texto muted */
+
+  /* Bordes */
+  --border-color: #334155; /* Bordes más oscuros */
+  --border-card: #1e293b;
+
+  /* Bordes de colores (más brillantes en dark) */
+  --border-blue: #60a5fa;
+  --border-red: #f87171;
+  --border-yellow: #fbbf24;
+  --border-green: #4ade80;
+  --border-gray: #9ca3af;
+
+  /* Sombras */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.6);
+
+  /* Colores primarios */
+  --primary: #60a5fa;
+  --primary-hover: #3b82f6;
+}
+
+/* ============================================
+   TRANSICIONES GLOBALES
+   ============================================ */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 html,
@@ -16,11 +104,16 @@ body,
   width: 100%;
 }
 
+:root {
+  /* Color usado sobre hero/background oscuro */
+  --text-on-hero: #ffffff;
+}
+
 body {
   font-family: "Inter", sans-serif;
   line-height: 1.6;
-  color: #121212;
-  background-color: #f4f7fa;
+  color: var(--text-primary);
+  background-color: var(--bg-main);
   /* app-wide variables */
   --sidebar-width: 260px;
 }
