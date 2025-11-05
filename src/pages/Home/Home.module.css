@@ -1,4 +1,6 @@
-main {
+.homeContainer {
+  max-width: 1200px;
+  margin: 0 auto;
   animation: fadeIn 0.5s ease-in-out;
 }
 
@@ -13,181 +15,285 @@ main {
   }
 }
 
-/* Hero Section */
-.hero {
-  position: relative;
-  text-align: center;
-  padding: 60px 20px;
-  color: var(--text-on-hero);
-  border-radius: 12px;
-  margin: 0 auto 60px auto;
-  max-width: 1024px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  background: #333; /* Fallback */
+/* --- Bento Grid Layout --- */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: minmax(150px, auto);
+  gap: 20px;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../img/bg2.jpg");
-  background-size: cover;
-  background-position: center;
-  filter: blur(3px) brightness(0.7);
-  z-index: 1;
-}
-
-.hero h1,
-.hero p,
-.hero .btn {
-  position: relative;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-}
-
-.heroText {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.btn {
-  padding: 12px 24px;
-  background-color: var(--primary);
-  color: var(--bg-card);
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s, transform 0.3s;
-  display: inline-block;
-}
-
-.btn:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px);
-}
-
-/* Sección Nuestro Equipo */
-.teamPreview {
-  margin-bottom: 60px;
+.bentoItem {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-md);
-  padding: 40px 20px;
-  border-radius: 12px;
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.teamPreview h2 {
-  font-size: 2.2rem;
-  color: var(--text-primary);
-  margin-bottom: 40px;
-}
-
-.teamMembers {
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.bentoItem:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+/* --- Tarjeta de Bienvenida --- */
+.welcomeCard {
+  grid-column: span 3;
+  grid-row: span 2;
   justify-content: center;
-  gap: 30px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images8.alphacoders.com/114/1142990.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
 }
 
-.member {
-  background-color: var(--bg-subcard);
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  width: 170px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-  border: 1px solid var(--border-card);
+.welcomeCard h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
 }
 
-.member img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  object-fit: cover;
-  border: 3px solid var(--bg-card);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.member h3 {
+.welcomeCard p {
   font-size: 1.1rem;
-  margin-bottom: 5px;
+  opacity: 0.9;
+  max-width: 90%;
+}
+
+/* --- Tarjetas de Estadísticas --- */
+.statCard {
+  grid-column: span 1;
+  align-items: center;
+  background-color: var(--bg-card);
+  justify-content: center;
+  text-align: center;
+}
+
+.bentoIcon {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.bentoNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
   color: var(--text-primary);
 }
 
-.member p {
+.bentoLabel {
   font-size: 0.9rem;
   color: var(--text-secondary);
+  margin-top: 4px;
 }
 
-.member:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.memberLink {
+/* --- Tarjeta de Diagramas --- */
+.diagramsCard {
+  grid-column: span 1;
   text-decoration: none;
-  color: inherit;
-  display: inline-block;
+  color: var(--text-primary);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.diagramsCard h4 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+/* --- Tarjeta CTA (Bitácora) --- */
+.ctaCard {
+  grid-column: span 3;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.ctaCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.ctaCard p {
+  color: var(--text-secondary);
+  margin-bottom: auto; /* Empuja el link hacia abajo */
+  padding-bottom: 16px;
+}
+
+.ctaLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-top: auto;
+}
+
+.ctaCard:hover .ctaLink {
+  text-decoration: underline;
+}
+
+/* --- Tarjeta Vista Previa del Equipo --- */
+.teamPreviewCard {
+  grid-column: span 2;
+  grid-row: span 1;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffd700; /* Amarillo LEGO */
+  color: #333;
+}
+
+.teamPreviewCard:hover {
+  border-color: #333;
+}
+
+.avatarGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 4px solid #ffd700; /* Mismo color que el fondo para el efecto */
+  margin-left: -20px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.teamPreviewCard:hover .avatar {
+  transform: scale(1.05) translateX(-5px);
+}
+
+.teamPreviewCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+/* --- Tarjeta de GitHub --- */
+.githubCard {
+  grid-column: span 2;
+  background-color: #161b22;
+  color: #c9d1d9;
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+}
+
+.githubCard:hover {
+  background-color: #1c2128;
+  border-color: #8b949e;
+}
+
+.githubCard svg {
+  color: white;
+  margin-bottom: 12px;
+}
+
+.githubCard h4 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* --- Tarjeta de API Data --- */
+.apiDataCard {
+  grid-column: span 2;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  text-decoration: none;
+  color: var(--text-primary);
+  background-color: var(--border-blue);
+}
+
+.apiDataCard svg {
+  color: var(--text-sidebar);
+  flex-shrink: 0;
+}
+
+.apiDataCard h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* --- Tarjeta de JSON Data --- */
+.jsonDataCard {
+  grid-column: span 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  background-color: var(--bg-card);
+}
+
+.jsonDataCard h4 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+/* Colores adicionales */
+.green {
+  background-color: #009639; /* Verde LEGO */
+  color: white;
+}
+.green .bentoIcon {
+  color: white;
+}
+.green .bentoNumber {
+  color: white;
+}
+.green .bentoLabel {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(4, 1fr);
   }
-
-  .heroText {
-    font-size: 1rem;
+  .welcomeCard,
+  .teamPreviewCard,
+  .ctaCard {
+    grid-column: span 4;
   }
-
-  .stats {
-    gap: 2rem;
+  .statCard {
+    grid-column: span 2;
   }
-
-  .statNumber {
-    font-size: 2rem;
+  .githubCard {
+    grid-column: span 2;
   }
-
-  .teamPreview h2,
-  .skillsPreview h2,
-  .ctaSection h2 {
-    font-size: 2rem;
-  }
-
-  .teamMembers {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .heroCta {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .btnPrimary,
-  .btnSecondary {
-    width: 100%;
+  .apiDataCard {
+    grid-column: span 4;
   }
 }
 
-/* Dark-mode tweak: oscurecer aún más la imagen del hero para mejorar legibilidad */
-[data-theme="dark"] .hero::before {
-  filter: blur(3px) brightness(0.45);
+@media (max-width: 640px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+  .welcomeCard,
+  .bentoItem {
+    grid-column: span 1;
+  }
+  .welcomeCard h1 {
+    font-size: 2rem;
+  }
 }
