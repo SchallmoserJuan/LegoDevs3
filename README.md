@@ -35,7 +35,7 @@ Requisitos: Node.js 18+ (recomendado) y npm o pnpm.
 
 ```bash
 git clone https://github.com/SchallmoserJuan/LegoDevs2.git
-cd LegoDevs2
+cd LegoDevs3
 ```
 
 2. Instala dependencias

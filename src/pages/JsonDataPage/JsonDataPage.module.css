@@ -4,31 +4,105 @@
   padding: 20px;
 }
 
+
 .header {
   text-align: center;
   margin-bottom: 40px;
+  padding: 40px 30px;
+  background: url("https://ideascdn.lego.com/media/generate/lego_ci/a8b589b4-5e22-4830-a876-17f31a498712/original:0:0/webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgba(85, 85, 85, 0.8); /* color de fondo con opacidad */
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
 }
+
 
 .header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: white; /* Asegura que el título sea blanco */
 }
+
 
 .header p {
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  color: white;
+  opacity: 0.9;
 }
 
+
 .header code {
-  background-color: var(--bg-card-muted);
-  color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
   padding: 2px 6px;
   border-radius: 4px;
   font-family: monospace;
 }
 
+
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 25px;
+}
+
+
+/* css para el contenedor de búsqueda */
+.searchContainer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
+}
+
+
+.searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+
+/* Estilos para los botones */
+.searchButton,
+.clearButton {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+
+.searchButton {
+  background-color: var(--primary);
+  color: white;
+}
+
+
+.clearButton {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
 }
