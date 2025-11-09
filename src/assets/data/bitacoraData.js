@@ -9,10 +9,13 @@ export const bitacoraData = [
     icon: "palette",
     highlights: [
       "Modo Oscuro implementado",
-      "Filtro de busqueda implementado",
-      "Bitacora actualizada y filtro implementado",
-      "mejora aun por descubrir",
-      "mejora aun por descubrir",
+      "Filtro de busqueda en pagina de Datos (API) implementado",
+      "Filtro de busqueda en pagina de Datos (JSON) implementado",
+      "Bitacora actualizada y filtro por estado implementado",
+      "Proyectos con “hover preview” y skills con modal temático",
+      "Nueva diseño de la página de Diagramas: árbol de renderizado, estructura de carpetas (copiable) y stack tecnológico.",
+      "Mejoras de accesibilidad: ARIA labels, roles, foco de teclado en submenú, alt en imágenes, y lectura de estado.",
+      "UX y rendimiento: `ScrollToTop` al cambiar de ruta, lazy-loading de imágenes y transiciones suaves.",
     ],
   },
   {

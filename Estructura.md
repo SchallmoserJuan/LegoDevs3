@@ -11,6 +11,8 @@
  ┃ ┣ 📂productCard
  ┃ ┃ ┣ 📜ProductCard.jsx
  ┃ ┃ ┗ 📜ProductCard.module.css
+ ┃ ┣ 📂ScrollToTop
+ ┃ ┃ ┗ 📜ScrollToTop.jsx
  ┃ ┣ 📂Sidebar
  ┃ ┃ ┣ 📂components
  ┃ ┃ ┃ ┣ 📂SkillModal
@@ -22,8 +24,15 @@
  ┃ ┃ ┃ ┗ 📜TeamSubmenu.jsx
  ┃ ┃ ┣ 📜Sidebar.jsx
  ┃ ┃ ┗ 📜Sidebar.module.css
- ┃ ┗ 📂StatsChart
+ ┃ ┣ 📂StatsChart
  ┃ ┃ ┗ 📜StatsChart.jsx
+ ┃ ┗ 📂ThemeToggle
+ ┃ ┃ ┣ 📜ThemeToggle.jsx
+ ┃ ┃ ┗ 📜ThemeToggle.module.css
+ ┣ 📂contexts
+ ┃ ┗ 📜ThemeContext.jsx
+ ┣ 📂hooks
+ ┃ ┗ 📜useTheme.js
  ┣ 📂img
  ┃ ┣ 📜arbol.png
  ┃ ┣ 📜banner.png
@@ -45,7 +54,9 @@
  ┃ ┣ 📂Home
  ┃ ┃ ┣ 📜Home.jsx
  ┃ ┃ ┣ 📜Home.module.css
- ┃ ┃ ┗ 📜TeamMemberCard.jsx
+ ┃ ┃ ┣ 📜TeamMemberCard.jsx
+ ┃ ┃ ┣ 📜TeamModal.jsx
+ ┃ ┃ ┗ 📜TeamModal.module.css
  ┃ ┣ 📂JsonDataPage
  ┃ ┃ ┣ 📜JsonDataPage.jsx
  ┃ ┃ ┗ 📜JsonDataPage.module.css
@@ -55,6 +66,8 @@
  ┃ ┃ ┣ 📜ProfileHeader.jsx
  ┃ ┃ ┣ 📜ProfilePage.jsx
  ┃ ┃ ┣ 📜ProfilePage.module.css
+ ┃ ┃ ┣ 📜ProjectPreview.jsx
+ ┃ ┃ ┣ 📜ProjectPreview.module.css
  ┃ ┃ ┣ 📜ProjectSection.jsx
  ┃ ┃ ┣ 📜SkillSection.jsx
  ┃ ┃ ┗ 📜StatsSection.jsx

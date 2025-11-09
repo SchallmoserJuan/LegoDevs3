@@ -5,7 +5,6 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -17,14 +16,12 @@
   }
 }
 
-
 /* --- Bento Grid Layout --- */
 .bentoGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-
 
 .bentoItem {
   background-color: var(--bg-card);
@@ -37,37 +34,56 @@
   flex-direction: column;
 }
 
-
 .bentoItem:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
 }
 
-
 /* --- Tarjeta de Encabezado --- */
 .headerCard {
   grid-column: span 3;
   text-align: center;
-  background: var(--primary);
-  color: white;
+  background: url("https://images6.alphacoders.com/131/thumb-1920-1314549.jpeg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  position: relative;
   padding: 40px 24px;
+  overflow: hidden;
 }
 
+/* Capa oscura solo sobre la imagen */
+.headerCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* ajusta la opacidad (0.3–0.6) */
+  border-radius: 16px;
+  z-index: 0;
+}
+
+/* Asegura que el texto quede arriba del overlay */
+.headerCard > * {
+  position: relative;
+  z-index: 1;
+}
 
 .headerCard h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: white; /* Asegura que el título sea blanco */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
-
 
 .headerCard p {
   font-size: 1.1rem;
   opacity: 0.9;
   max-width: 700px;
   margin: 0 auto;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
-
 
 /* --- Tarjetas de Diagramas --- */
 .cardHeader {
@@ -77,18 +93,15 @@
   margin-bottom: 16px;
 }
 
-
 .cardIcon {
   color: var(--primary);
   flex-shrink: 0;
 }
 
-
 .bentoItem h2 {
   font-size: 1.5rem;
   margin: 0;
 }
-
 
 .description {
   color: var(--text-secondary);
@@ -96,18 +109,15 @@
   line-height: 1.6;
 }
 
-
 .diagramCard {
   grid-column: span 2;
   grid-row: span 1;
 }
 
-
 .structureCard {
   grid-column: span 1;
   grid-row: span 1; /* Mantenemos esto para claridad */
 }
-
 
 .imageContainer {
   width: 100%;
@@ -121,14 +131,12 @@
   cursor: zoom-in;
 }
 
-
 .diagramImage {
   width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
 }
-
 
 .structureContainer {
   background-color: var(--bg-code);
@@ -140,7 +148,6 @@
   position: relative;
 }
 
-
 .structurePre {
   color: var(--text-secondary);
   font-family: "Fira Code", monospace;
@@ -149,7 +156,6 @@
   white-space: pre;
   margin: 0;
 }
-
 
 .copyButton {
   position: absolute;
@@ -170,13 +176,11 @@
   z-index: 10;
 }
 
-
 .copyButton:hover {
   background-color: var(--primary-muted);
   color: var(--primary);
   border-color: var(--primary);
 }
-
 
 /* --- Tarjeta de Stack Tecnológico --- */
 .techStackCard {
@@ -187,13 +191,11 @@
   gap: 24px;
 }
 
-
 .techStackCard .description {
   font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
   margin-bottom: 0; /* Eliminamos el margen inferior */
   flex-basis: 35%; /* Le damos un ancho base para que no se expanda demasiado */
 }
-
 
 .techGrid {
   display: grid;
@@ -201,7 +203,6 @@
   flex-grow: 1; /* Mantenemos esto para el layout general */
   gap: 16px;
 }
-
 
 .techItem {
   display: flex;
@@ -213,26 +214,22 @@
   text-align: center;
 }
 
-
 .techLogo {
   height: 32px;
   width: 32px;
   object-fit: contain;
 }
 
-
 /* Invierte el color de logos oscuros en tema dark */
 [data-theme="dark"] .invertInDark .techLogo {
   filter: invert(1) brightness(2);
 }
-
 
 .techItem span {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-secondary);
 }
-
 
 /* --- Modal para la Imagen --- */
 .modalOverlay {
@@ -250,13 +247,11 @@
   cursor: zoom-out;
 }
 
-
 .modalContent {
   position: relative;
   max-width: 95vw;
   max-height: 95vh;
 }
-
 
 .modalImage {
   width: 100%;
@@ -265,7 +260,6 @@
   object-fit: contain;
   border-radius: 8px;
 }
-
 
 .closeButton {
   position: absolute;
@@ -285,11 +279,9 @@
   transition: all 0.2s ease;
 }
 
-
 .closeButton:hover {
   transform: scale(1.1) rotate(90deg);
 }
-
 
 /* Responsive */
 @media (max-width: 1024px) {
@@ -309,7 +301,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 
 @media (max-width: 768px) {
   .bentoGrid {
@@ -339,4 +330,3 @@
     grid-template-columns: none; /* Reseteamos la rejilla */
   }
 }
-

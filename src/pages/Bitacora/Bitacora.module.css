@@ -5,7 +5,6 @@
   animation: fadeIn 0.5s ease-in-out;
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -17,20 +16,22 @@
   }
 }
 
-
 /* Header */
 .header {
   text-align: center;
   margin-bottom: 50px;
   padding: 40px 30px; /* Se mantiene el padding */
-  background: var(--primary);
+  background: url("https://images8.alphacoders.com/135/thumb-1920-1354759.png");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgba(85, 85, 85, 0.8);
   color: white;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
   position: relative;
   overflow: hidden;
 }
-
 
 .header::before {
   content: "";
@@ -47,7 +48,6 @@
   animation: float 15s infinite ease-in-out;
 }
 
-
 @keyframes float {
   0%,
   100% {
@@ -58,13 +58,11 @@
   }
 }
 
-
 .headerIcon {
   display: inline-flex;
   margin-bottom: 1rem;
   animation: pulse 2s infinite;
 }
-
 
 .header h1 {
   margin-bottom: 10px;
@@ -73,7 +71,6 @@
   z-index: 1;
 }
 
-
 .header p {
   font-size: 1.1rem;
   opacity: 0.95;
@@ -81,7 +78,6 @@
   z-index: 1;
   margin-bottom: 1.5rem;
 }
-
 
 /* Stats Bar */
 .statsBar {
@@ -95,7 +91,6 @@
   z-index: 1;
 }
 
-
 .statItem {
   display: flex;
   flex-direction: column;
@@ -103,13 +98,11 @@
   gap: 0.3rem;
 }
 
-
 .statNumber {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
 }
-
 
 .statLabel {
   font-size: 0.85rem;
@@ -118,13 +111,11 @@
   letter-spacing: 1px;
 }
 
-
 /* Timeline */
 .timeline {
   position: relative;
   padding: 20px 0;
 }
-
 
 .timeline::before {
   content: "";
@@ -137,7 +128,6 @@
   border-radius: 2px;
 }
 
-
 /* Timeline Items */
 .timelineItem {
   position: relative;
@@ -145,7 +135,6 @@
   padding-left: 60px;
   animation: slideIn 0.5s ease-out backwards;
 }
-
 
 .timelineItem:nth-child(1) {
   animation-delay: 0.1s;
@@ -160,7 +149,6 @@
   animation-delay: 0.4s;
 }
 
-
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -171,7 +159,6 @@
     transform: translateX(0);
   }
 }
-
 
 .timelineIcon {
   position: absolute;
@@ -190,22 +177,18 @@
   transition: transform 0.3s ease;
 }
 
-
 .timelineItem:hover .timelineIcon {
   transform: scale(1.1) rotate(5deg);
 }
-
 
 .completed .timelineIcon {
   background: linear-gradient(135deg, #16a34a, #22c55e);
 }
 
-
 .current .timelineIcon {
   background: linear-gradient(135deg, #2563eb, #3b82f6);
   animation: pulse 2s infinite;
 }
-
 
 @keyframes pulse {
   0%,
@@ -216,7 +199,6 @@
     box-shadow: 0 2px 20px rgba(37, 99, 235, 0.6);
   }
 }
-
 
 /* Timeline Content */
 .timelineContent {
@@ -229,12 +211,10 @@
   transition: all 0.3s ease;
 }
 
-
 .timelineContent:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
-
 
 .contentHeader {
   display: flex;
@@ -244,13 +224,11 @@
   gap: 1rem;
 }
 
-
 .timelineContent h2 {
   margin: 0 0 8px 0;
   font-size: 1.5rem;
   color: var(--text-primary);
 }
-
 
 .date {
   display: block;
@@ -259,13 +237,11 @@
   font-weight: 600;
 }
 
-
 .timelineContent p {
   margin: 0 0 15px 0;
   color: var(--text-secondary);
   line-height: 1.7;
 }
-
 
 /* Tags */
 .tag {
@@ -278,16 +254,13 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-
 .tagCompleted {
   background: linear-gradient(135deg, #16a34a, #22c55e);
 }
 
-
 .tagInProgress {
   background: var(--primary);
 }
-
 
 /* Highlights Section */
 .highlightsSection {
@@ -295,7 +268,6 @@
   padding-top: 15px;
   border-top: 1px solid #e2e8f0;
 }
-
 
 .detailsToggle {
   display: flex;
@@ -313,19 +285,16 @@
   font-size: 0.9rem;
 }
 
-
 .detailsToggle:hover {
   background-color: #f1f5f9;
   border-color: #cbd5e1;
   color: #1e293b;
 }
 
-
 .detailsToggle:focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
-
 
 .highlightsList {
   list-style: none;
@@ -333,7 +302,6 @@
   margin: 15px 0 0 0;
   animation: slideDown 0.3s ease-out;
 }
-
 
 @keyframes slideDown {
   from {
@@ -346,7 +314,6 @@
   }
 }
 
-
 .highlightsList li {
   padding: 10px 15px;
   margin-bottom: 8px;
@@ -358,13 +325,11 @@
   transition: all 0.2s ease;
 }
 
-
 .highlightsList li:hover {
   background-color: var(--primary-muted);
   transform: translateX(5px);
   border-left-color: var(--primary);
 }
-
 
 .highlightsList li::before {
   content: "✓";
@@ -373,51 +338,42 @@
   font-weight: bold;
 }
 
-
 /* Responsive */
 @media (max-width: 768px) {
   .bitacoraContainer {
     padding: 1rem 0.5rem;
   }
 
-
   .header {
     padding: 30px 20px;
     margin-bottom: 30px;
   }
 
-
   .header h1 {
     font-size: 2rem;
   }
 
-
   .header p {
     font-size: 1rem;
   }
-
 
   .statsBar {
     gap: 1.5rem;
     flex-wrap: wrap;
   }
 
-
   .statNumber {
     font-size: 1.5rem;
   }
-
 
   .timelineItem {
     padding-left: 50px;
     margin-bottom: 30px;
   }
 
-
   .timeline::before {
     left: 16px;
   }
-
 
   .timelineIcon {
     width: 36px;
@@ -425,47 +381,39 @@
     left: -2px;
   }
 
-
   .timelineContent {
     padding: 20px;
   }
-
 
   .contentHeader {
     flex-direction: column;
     align-items: flex-start;
   }
 
-
   .tag {
     align-self: flex-start;
     margin-top: 10px;
   }
-
 
   .timelineContent h2 {
     font-size: 1.3rem;
   }
 }
 
-
 @media (max-width: 480px) {
   .header h1 {
     font-size: 1.75rem;
   }
 
-
   .statsBar {
     gap: 1rem;
   }
-
 
   .statItem {
     flex: 1;
     min-width: 80px;
   }
 }
-
 
 /* Filter Controls */
 .filterContainer {
@@ -480,7 +428,6 @@
   box-shadow: var(--shadow-sm);
 }
 
-
 .filterButton {
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
@@ -492,15 +439,22 @@
   transition: all 0.2s ease;
 }
 
-
-.filterButton:hover {
+.filterButton:hover:not(.activeFilter) {
   background-color: var(--primary-muted);
   color: var(--text-primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
-
 
 .activeFilter {
   background-color: var(--primary);
   color: white;
   border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+}
+
+.activeFilter:hover {
+  /* Un sutil efecto de brillo para el botón activo */
+  filter: brightness(1.1);
 }

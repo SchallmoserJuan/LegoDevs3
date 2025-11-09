@@ -1,5 +1,6 @@
 /* Estilos Globales - Punto de entrada principal */
 
+
 /* Importamos las fuentes y reseteos básicos de index.css */
 @import url("../index.css");
 
@@ -56,6 +57,17 @@
   /* Colores primarios */
   --primary: #3b82f6;
   --primary-hover: #2563eb;
+
+  /* Colores LEGO por página */
+  --lego-blue: #3b82f6;
+  --lego-red: #ef4444;
+  --lego-yellow: #f59e0b;
+  --lego-green: #22c55e;
+  --lego-purple: #8b5cf6;
+  --lego-orange: #f97316;
+  
+  /* Color activo dinámico (cambia según la página) */
+  --active-color: var(--lego-blue);
 }
 
 
@@ -180,3 +192,5 @@ a {
     padding: 15px;
   }
 }
+
+

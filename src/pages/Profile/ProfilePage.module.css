@@ -1,4 +1,11 @@
 /* ProfilePage.module.css - Versión mejorada */
+.card,
+.profileHeader,
+.projectList li,
+.skillTag,
+.contactLink {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .dashboardContainer {
   display: grid;
@@ -104,11 +111,13 @@
   border-radius: 24px;
   object-fit: cover;
   border: 4px solid var(--border-blue);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
 .avatar:hover {
-  transform: scale(1.05);
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .headerText h1 {
@@ -136,6 +145,12 @@
   font-weight: 700;
   animation: pulse 2s infinite;
 }
+
+.statusBadge,
+.projectList span {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
 
 @keyframes pulse {
   0%, 100% {
@@ -180,6 +195,19 @@
   transform: rotate(-90deg);
 }
 
+.projectsSection.collapsed .projectList {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.projectsSection .projectList {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
 .projectList {
   list-style: none;
   padding-left: 5px;
@@ -209,6 +237,8 @@
 
 .projectList li:hover {
   background-color: var(--bg-subcard);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
 .projectList li:last-child {
@@ -244,6 +274,7 @@
 
 .skillTag {
   background-color: var(--bg-subcard);
+  background: var(--bg-subcard);
   color: var(--text-primary);
   padding: 8px 16px;
   border-radius: 20px;
@@ -251,11 +282,13 @@
   font-weight: 600;
   transition: all 0.2s ease;
   cursor: default;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05), inset -2px -2px 5px rgba(255,255,255,0.05);
 }
 .skillTag:hover {
-  background-color: var(--bg-subcard);
-  transform: scale(1.05);
-  box-shadow: 0 2px 8px rgba(67, 56, 202, 0.08);
+  background-color: var(--primary);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.2);
 }
 
 
@@ -288,6 +321,17 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.card h3 svg,
+.contactLink svg {
+  transition: all 0.3s ease;
+}
+
+.card h3 svg:hover,
+.contactLink svg:hover {
+  transform: scale(1.2);
+  color: var(--primary);
 }
 
 .contactLink {

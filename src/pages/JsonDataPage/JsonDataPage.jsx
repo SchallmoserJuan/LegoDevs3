@@ -5,27 +5,22 @@ import productsData from "../../assets/data/products.json";
 import ProductCard from "../../components/productCard/ProductCard"; // Ajusta la ruta según tu estructura
 import styles from "./JsonDataPage.module.css";
 
-
 const JsonDataPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeSearch, setActiveSearch] = useState("");
-
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
-
   const handleSearch = () => {
     setActiveSearch(searchTerm);
   };
-
 
   const handleClear = () => {
     setSearchTerm("");
     setActiveSearch("");
   };
-
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -33,11 +28,9 @@ const JsonDataPage = () => {
     }
   };
 
-
   const filteredProducts = productsData.filter((product) =>
     product.name.toLowerCase().includes(activeSearch.toLowerCase())
   );
-
 
   // Variants para animaciones de Framer Motion
   const gridContainerVariants = {
@@ -48,12 +41,10 @@ const JsonDataPage = () => {
     },
   };
 
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   };
-
 
   return (
     <div className={styles.pageContainer}>
@@ -86,7 +77,6 @@ const JsonDataPage = () => {
         </div>
       </motion.header>
 
-
       <motion.div
         className={styles.gridContainer}
         key={activeSearch} // <-- AÑADIMOS ESTA KEY PARA FORZAR EL RE-RENDERIZADO
@@ -115,6 +105,5 @@ const JsonDataPage = () => {
     </div>
   );
 };
-
 
 export default JsonDataPage;

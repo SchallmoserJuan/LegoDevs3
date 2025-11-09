@@ -1,3 +1,4 @@
+// Sidebar.jsx
 import { useState } from "react";
 import {
   Home,
@@ -15,6 +16,7 @@ import { NavItem } from "./components/NavItem";
 import { TeamSubmenu } from "./components/TeamSubmenu";
 import styles from "./Sidebar.module.css";
 import banner from "../../img/banner.png";
+import { useLocation } from "react-router-dom";
 
 const NAV_ITEMS = [
   { to: "/", icon: Home, label: "Home" },
@@ -30,6 +32,24 @@ const SECONDARY_NAV_ITEMS = [
 const Sidebar = () => {
   const [isSubmenuOpen, setSubmenuOpen] = useState(false);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const routeColors = {
+    "/": "#3b82f6",
+    "/bitacora": "#ef4444",
+    "/profile": "#f59e0b",
+    "/json-data": "#22c55e",
+    "/api-data": "#8b5cf6",
+    "/diagrams": "#f97316",
+  };
+
+  const getCurrentColor = () => {
+    const path = location.pathname;
+    if (path.startsWith("/profile")) return routeColors["/profile"];
+    return routeColors[path] || routeColors["/"];
+  };
+
+  const activeColor = getCurrentColor();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
@@ -37,7 +57,6 @@ const Sidebar = () => {
 
   return (
     <>
-      {/* Botón hamburguesa para celular */}
       <button
         className={styles.mobileMenuToggle}
         onClick={toggleMobileMenu}
@@ -47,7 +66,6 @@ const Sidebar = () => {
         {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
 
-      {/* Overlay para cerrar en celular */}
       {isMobileMenuOpen && (
         <div
           className={styles.overlay}
@@ -60,8 +78,8 @@ const Sidebar = () => {
         className={`${styles.containerLeft} ${
           isMobileMenuOpen ? styles.mobileOpen : ""
         }`}
+        style={{ "--active-color": activeColor }}
       >
-        {/* Profile Section */}
         <section className={styles.profileSection}>
           <header className={styles.header}>
             <img src={banner} alt="Banner del equipo" loading="lazy" />
@@ -74,13 +92,10 @@ const Sidebar = () => {
           />
           <h1>Grupo 5</h1>
           <h2>Proyecto Frontend</h2>
-          {/* El toggle de tema se muestra en el contenido principal (Layout) */}
         </section>
 
-        {/* Navigation Section */}
         <nav className={styles.navSection} aria-label="Navegación principal">
           <ul className={styles.menu}>
-            {/* Navegación principal */}
             {NAV_ITEMS.map((item) => (
               <NavItem
                 key={item.to}
@@ -91,7 +106,6 @@ const Sidebar = () => {
               />
             ))}
 
-            {/* Menú de equipo con submenú */}
             <li className={styles.menuItem}>
               <button
                 className={styles.menuButton}
@@ -106,16 +120,13 @@ const Sidebar = () => {
                 isOpen={isSubmenuOpen}
                 members={teamData}
                 onItemClick={() => {
-                  // Solo cerramos el menú móvil, mantenemos el submenú abierto
                   setMobileMenuOpen(false);
                 }}
               />
             </li>
 
-            {/* Divisor */}
             <hr className={styles.divider} />
 
-            {/* Navegación secundaria */}
             {SECONDARY_NAV_ITEMS.map((item) => (
               <NavItem
                 key={item.to}
@@ -128,10 +139,9 @@ const Sidebar = () => {
           </ul>
         </nav>
 
-        {/* GitHub Link */}
         <div className={styles.githubProjectLink}>
           <a
-            href="https://github.com/SchallmoserJuan/LegoDevs2"
+            href="https://github.com/SchallmoserJuan/LegoDevs3"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.githubBtn}
