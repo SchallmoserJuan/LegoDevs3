@@ -2,7 +2,8 @@
 
 <img width="3780" height="1890" alt="ldbanner" src="https://github.com/user-attachments/assets/fe4acd06-2dd2-4c5d-a8ed-39e4839be3b5" />
 
-Aplicación frontend desarrollada como trabajo práctico para la materia Frontend (IFTS 29). Es una SPA construida con React + Vite que incorpora navegación con Sidebar, temas claro/oscuro, páginas de datos (JSON y API), Bitácora, Perfil con módulos, y una sección de Diagramas.
+* Aplicación frontend desarrollada como trabajo práctico para la materia Frontend (IFTS 29). 
+* Es una SPA construida con React + Vite que incorpora navegación con Sidebar, temas claro/oscuro, páginas de datos (JSON y API), Bitácora, Perfil con módulos, y una sección de Diagramas.
 
 ## Principales mejoras
 
