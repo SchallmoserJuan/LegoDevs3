@@ -1,70 +1,342 @@
 .pageContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 2rem 1rem;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.header {
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* --- Bento Grid Layout --- */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+
+.bentoItem {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.bentoItem:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+
+/* --- Tarjeta de Encabezado --- */
+.headerCard {
+  grid-column: span 3;
   text-align: center;
-  margin-bottom: 50px;
+  background: var(--primary);
+  color: white;
+  padding: 40px 24px;
 }
 
-.header h1 {
+
+.headerCard h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.header p {
+
+.headerCard p {
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.diagramSection {
-  background-color: var(--bg-card);
-  padding: 30px;
-  border-radius: 12px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+/* --- Tarjetas de Diagramas --- */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
-.diagramSection h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+
+.cardIcon {
+  color: var(--primary);
+  flex-shrink: 0;
 }
+
+
+.bentoItem h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
 
 .description {
-  font-size: 1rem;
   color: var(--text-secondary);
-  margin-bottom: 25px;
-  max-width: 800px;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
+
+.diagramCard {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+
+.structureCard {
+  grid-column: span 1;
+  grid-row: span 1; /* Mantenemos esto para claridad */
+}
+
+
 .imageContainer {
+  width: 100%;
   background-color: var(--bg-card-muted);
-  border: 1px solid var(--border-card);
   border-radius: 8px;
-  padding: 20px;
+  border: 1px solid var(--border-color);
+  overflow: hidden; /* Mantenemos el overflow por si acaso */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-in;
+}
+
+
+.diagramImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+.structureContainer {
+  background-color: var(--bg-code);
+  border-radius: 8px;
+  padding: 16px;
+  overflow: auto;
+  flex-grow: 1;
+  border: 1px solid var(--border-color);
+  position: relative;
+}
+
+
+.structurePre {
+  color: var(--text-secondary);
+  font-family: "Fira Code", monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre;
+  margin: 0;
+}
+
+
+.copyButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+
+.copyButton:hover {
+  background-color: var(--primary-muted);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+
+/* --- Tarjeta de Stack Tecnológico --- */
+.techStackCard {
+  grid-column: span 3;
+  grid-row: span 1; /* Corregido: debe ocupar solo 1 fila */
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+}
+
+
+.techStackCard .description {
+  font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+  margin-bottom: 0; /* Eliminamos el margen inferior */
+  flex-basis: 35%; /* Le damos un ancho base para que no se expanda demasiado */
+}
+
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas iguales */
+  flex-grow: 1; /* Mantenemos esto para el layout general */
+  gap: 16px;
+}
+
+
+.techItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 4px;
   text-align: center;
 }
 
-.structurePre {
-  text-align: left;
-  white-space: pre-wrap;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
-    "Segoe UI Mono", monospace;
-  font-size: 0.95rem;
-  color: #111827;
-  background: var(--bg-card-muted);
-  padding: 16px;
-  border-radius: 6px;
-  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.03);
-  overflow: auto;
-  max-height: 420px;
+
+.techLogo {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
 }
 
-.diagramImage {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+/* Invierte el color de logos oscuros en tema dark */
+[data-theme="dark"] .invertInDark .techLogo {
+  filter: invert(1) brightness(2);
 }
+
+
+.techItem span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+
+/* --- Modal para la Imagen --- */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  cursor: zoom-out;
+}
+
+
+.modalContent {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+
+.closeButton {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: white;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+
+.closeButton:hover {
+  transform: scale(1.1) rotate(90deg);
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .headerCard,
+  .techStackCard,
+  .diagramCard {
+    grid-column: span 2;
+  }
+  .structureCard {
+    grid-column: span 2; /* Aseguramos que ocupe 2 columnas en tablet */
+  }
+  .techGrid {
+    /* En tablet, pasamos a 2 columnas para evitar que se rompa */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+  .headerCard,
+  .diagramCard,
+  .structureCard,
+  .techStackCard {
+    grid-column: span 1;
+    grid-row: auto; /* Resetea el span de fila */
+  }
+  .headerCard h1 {
+    font-size: 2rem;
+  }
+  .bentoItem {
+    padding: 20px;
+  }
+  .techStackCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .techGrid {
+    display: flex; /* Volvemos a flex en móvil */
+    flex-wrap: wrap; /* Permitimos que los ítems se envuelvan */
+    justify-content: center; /* Centramos los ítems */
+    grid-template-columns: none; /* Reseteamos la rejilla */
+  }
+}
+
