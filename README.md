@@ -1,6 +1,6 @@
 # LegoDevs3 — Proyecto Frontend (Grupo 5)
 
-<img width="3780" height="1890" alt="legodevsbanner" src="https://github.com/user-attachments/assets/8b7708f0-993c-4fd9-8b77-7af47464fd61" />
+<img width="1920" height="1080" alt="legodevsbanner" src="https://github.com/user-attachments/assets/8b7708f0-993c-4fd9-8b77-7af47464fd61" />
 
 
 * Aplicación frontend desarrollada como trabajo práctico para la materia Frontend (IFTS 29). 
